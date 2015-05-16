@@ -1,6 +1,8 @@
 /**
  * Created by josef on 16.05.2015.
  */
+
+//p96
 object SyntaxChecker {
 
     def isIdentifier(str: String): Boolean = {

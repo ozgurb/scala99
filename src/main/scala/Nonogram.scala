@@ -1,6 +1,8 @@
 /**
  * Created by josef on 16.05.2015.
  */
+
+//p98
 object Nonogram {
     def isRight(n1: Int, n2: Int, n: Int, v: Vector[Int]) = {
         def isright0(nn1: Int, level: Int, flag: Int, vv: Vector[Int]): Boolean = {

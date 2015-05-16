@@ -1,6 +1,8 @@
 /**
  * Created by josef on 16.05.2015.
  */
+
+//p97
 object Sudoku {
     val sdi = Vector(Vector(0, 0, 4, 8, 0, 0, 0, 1, 7),
         Vector(6, 7, 0, 9, 0, 0, 0, 0, 0),

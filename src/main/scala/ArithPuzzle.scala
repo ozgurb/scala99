@@ -1,6 +1,8 @@
 /**
  * Created by josef on 16.05.2015.
  */
+
+//p93
 object ArithPuzzle {
     def solution(lst_int: List[Int]): List[String] = {
         val idlst = lst_int.toSet.toList

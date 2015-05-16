@@ -1,6 +1,8 @@
 /**
  * Created by josef on 16.05.2015.
  */
+
+//p95
 object FullWord {
     def fullWord(n: Int) : String = {
         def toStr(nn: Int): String = nn match {

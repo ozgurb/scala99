@@ -3,6 +3,8 @@
 /**
  * Created by josef on 16.05.2015.
  */
+
+//p91
 object KnightJump {
     //tamam lanması gereken kısımlar var ve optimize edilip hızlandırılmalı
     case class Point(i: Int, j: Int)

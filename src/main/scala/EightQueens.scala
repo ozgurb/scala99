@@ -1,6 +1,8 @@
 /**
  * Created by josef on 16.05.2015.
  */
+
+//p90
 object EightQueens {
     def solution: List[List[(Int, Int)]] = {
         def isOk(accu: List[(Int, Int)], x: Int, y: Int): Boolean = {

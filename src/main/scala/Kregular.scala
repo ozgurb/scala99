@@ -1,6 +1,8 @@
 /**
  * Created by josef on 16.05.2015.
  */
+
+//p94
 object Kregular {
     def neighbors(n: Int, lst_edge: List[Set[Int]]) = {
         val neigh_edge = lst_edge.filter(x => x.contains(n))

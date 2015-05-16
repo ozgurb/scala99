@@ -1,6 +1,8 @@
 /**
  * Created by josef on 16.05.2015.
  */
+
+//p99
 object CrosswordPuzzle {
 
     val ff = "/home/josef/Masaüstü/notlar/p99a.dat"
