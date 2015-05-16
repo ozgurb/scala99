@@ -1,6 +1,8 @@
 /**
  * Created by josef on 16.05.2015.
  */
+
+//p50
 object Huffman {
     def huffman[T](list: List[(T, Int)]): List[(T, String)] = {
 
