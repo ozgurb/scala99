@@ -1,5 +1,5 @@
 /**
- * Created by josef on 16.05.2015.
+ * Created by ozgurb on 16.05.2015.
  */
 
 //p94
@@ -12,7 +12,7 @@ object Kregular {
 
     def isIsomorphic(glst1: List[Set[Int]], glst2: List[Set[Int]]) = {
         def isOk(lst1: List[Int], lst2: List[Int]) = {
-            val mmap = (lst1 zip lst2) toMap
+            val mmap = (lst1 zip lst2).toMap
             def isright1(lst: List[Int]): Boolean = {
                 if(lst.isEmpty) true
                 else {
