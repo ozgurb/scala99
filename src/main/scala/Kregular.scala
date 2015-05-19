@@ -63,4 +63,6 @@ object Kregular {
 
     }
 
+    val coz = solution(6, 3)
+
 }

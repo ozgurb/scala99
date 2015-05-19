@@ -278,9 +278,9 @@ abstract class GraphObjBase {
 
     /**
      * Stringden graf oluşturmak icin genel bir fonksiyon.
-     * @param s : Bu stringden graf oluşturur.
-     * @param c1 : Bu karekter düğümleri bir birinden ayırmakta kullanılan karekterdir.
-     * @param c2 : Bu karekter kenarlar bir degere sahipse onu ayırmakda kullanılan karekterdir.
+     * @param s : Graf oluşturulacak string.
+     * @param c1 : Düğümleri bir birinden ayırmakta kullanılan karekterdir.
+     * @param c2 : Kenarlar bir degere sahipse onu ayırmakda kullanılan karekterdir.
      * @param label : Grafın yönlü olup olmadığını gösterir.
      * @return : Dönüş degeğeri bir grafdır.
      */

@@ -5,7 +5,7 @@
 //p99
 object CrosswordPuzzle {
 
-    val ff = "/home/josef/Masaüstü/notlar/p99a.dat"
+
     def valuesFile(src: String) = {
         val source = scala.io.Source.fromFile(src)
         val file = try source.mkString finally source.close()
@@ -153,4 +153,6 @@ object CrosswordPuzzle {
         }
     }
 
+    val ff = "p99d.dat"
+    val coz = solution(ff)
 }

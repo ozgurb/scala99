@@ -6,13 +6,6 @@
 object VonKoch {
 
 
-    val lst1 = List(Set("a", "g"), Set("a", "b"), Set("a", "i"),  Set("a", "h"),
-        Set("a", "c"), Set("c", "f"), Set("c", "d"), Set("d", "k"), Set("c", "e"),
-        Set("e", "q"), Set("q", "m"), Set("q", "n"), Set("n", "p"))
-
-
-
-
     def solutions(glst: List[Set[String]]): List[(String, Int)] = {
 
         def hamleler(glst: List[Set[(String, Int)]]) = {
@@ -56,5 +49,11 @@ object VonKoch {
         sl.map(x => List(x.head, x.last)).flatten.toSet.toList
 
     }
+
+    val glst = List(Set("a", "g"), Set("a", "b"), Set("a", "i"),  Set("a", "h"),
+        Set("a", "c"), Set("c", "f"), Set("c", "d"), Set("d", "k"), Set("c", "e"),
+        Set("e", "q"), Set("q", "m"), Set("q", "n"), Set("n", "p"))
+
+    val coz = solutions(glst)
 
 }

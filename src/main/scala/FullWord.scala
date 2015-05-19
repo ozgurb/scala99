@@ -32,5 +32,5 @@ object FullWord {
         rr.map(x => toStr(x)).mkString("-")
     }
 
-
+    val coz = fullWord(175)
 }

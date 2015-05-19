@@ -4,6 +4,7 @@
 
 //p93
 object ArithPuzzle {
+
     def solution(lst_int: List[Int]): List[String] = {
         val idlst = lst_int.toSet.toList
         val m = idlst.map { x =>
@@ -123,5 +124,6 @@ object ArithPuzzle {
         }
     }
 
-
+    val lst = List(2,3,5,7,11, 1001)
+    val coz = solution(lst)
 }
