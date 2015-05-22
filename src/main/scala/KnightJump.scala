@@ -20,22 +20,54 @@ object KnightJump {
 
     }
 
-    def coz(n: Int, accu: List[Point]) : List[Point] = {
-        def rcloop(lst: List[Point]): List[Point]  = {
-            if(lst.isEmpty) accu
+
+    def tours(nn: Int, x: Int, y: Int) = {
+        def coz(n: Int, accu: List[Point]) : List[Point] = {
+            def nloop(lst: List[Point]): List[Point]  = {
+                if(lst.isEmpty) Nil
+                else {
+                    val t = coz(n, lst.head :: accu)
+                    if(t.length == n * n) t
+                    else nloop(lst.tail)
+                }
+            }
+            if(accu.length == n * n) accu
             else {
-                val t = coz(n, lst.head :: accu)
-                if(t.length == n * n) t
-                else rcloop(lst.tail)
+
+                val h = hamle(accu.head, n)
+                val gecerli = h diff accu
+                nloop(gecerli)
             }
         }
-        if(accu.length == n * n) accu
-        else {
 
-            val h = hamle(accu.head, n)
-            val gecerli = h diff accu
-            rcloop(gecerli)
+        require(x < nn + 1 && x > 0)
+        require(y < nn + 1 && y > 0)
+        coz(nn, List(Point(x, y))).reverse
+    }
+
+    def closedtours(nn: Int, x: Int, y: Int) = {
+        def coz(n: Int, accu: List[Point], start: Point) : List[Point] = {
+            def nloop(lst: List[Point]): List[Point]  = {
+                if(lst.isEmpty) Nil
+                else {
+                    val t = coz(n, lst.head :: accu, start)
+                    if(t.length == n * n) t
+                    else nloop(lst.tail)
+                }
+            }
+            if(accu.length == n * n) accu
+            else {
+
+                val h = hamle(accu.head, n)
+                val gecerli = h diff accu
+                val s = hamle(start, n)
+                if((s diff accu) == Nil) Nil
+                else nloop(gecerli)
+            }
         }
+        require(x < nn + 1 && x > 0)
+        require(y < nn + 1 && y > 0)
+        coz(nn, List(Point(x, y)), Point(x, y)).reverse
     }
 
 
