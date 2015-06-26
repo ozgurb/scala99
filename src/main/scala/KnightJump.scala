@@ -21,7 +21,7 @@ object KnightJump {
     }
 
 
-    def tours(nn: Int, x: Int, y: Int) = {
+    def tour(nn: Int, x: Int, y: Int) = {
         def coz(n: Int, accu: List[Point]) : List[Point] = {
             def nloop(lst: List[Point]): List[Point]  = {
                 if(lst.isEmpty) Nil
@@ -45,7 +45,7 @@ object KnightJump {
         coz(nn, List(Point(x, y))).reverse
     }
 
-    def closedtours(nn: Int, x: Int, y: Int) = {
+    def closedtour(nn: Int, x: Int, y: Int) = {
         def coz(n: Int, accu: List[Point], start: Point) : List[Point] = {
             def nloop(lst: List[Point]): List[Point]  = {
                 if(lst.isEmpty) Nil
@@ -68,6 +68,35 @@ object KnightJump {
         require(x < nn + 1 && x > 0)
         require(y < nn + 1 && y > 0)
         coz(nn, List(Point(x, y)), Point(x, y)).reverse
+    }
+
+    def alltours(nn: Int, x: Int, y: Int) = {
+        def coz1(n: Int, accu: List[Point]) : List[List[Point]] = {
+            if(accu.length == n * n) List(accu.reverse)
+            else {
+                val h = hamle(accu.head, n)
+                val gecerli = h diff accu
+                (for(i <- gecerli) yield coz1(n, i :: accu)).flatten
+            }
+
+        }
+
+        coz1(nn, List(Point(x, y)))
+    }
+
+    def alllazytours(nn: Int, x: Int, y: Int) = {
+        def coz1(n: Int, accu: List[Point]) : Stream[List[Point]] = {
+            if(accu.length == n * n) Stream(accu.reverse)
+            else {
+                val h = hamle(accu.head, n)
+                val gecerli = (h diff accu).toStream
+                (for(i <- gecerli) yield coz1(n, i :: accu)).flatten
+            }
+
+        }
+
+        coz1(nn, List(Point(x, y)))
+
     }
 
 

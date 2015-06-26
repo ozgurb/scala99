@@ -62,7 +62,8 @@ object Prog {
         println(Graph.fromString("[a-b, b-c, d, e-f, f-g, g-e, h]").isBipartite)
         println("izomorfik test")
         println(Graph.fromString("[a-b]").isIsomorphicTo(Graph.fromString("[5-7]")))
-        println(KnightJump.closedtours(6, 1, 1))
+        println(KnightJump.closedtour(6, 1, 1))
+        println(KnightJump.alllazytours(7, 6, 4))
         println("felan filan")
 
     }

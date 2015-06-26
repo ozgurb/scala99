@@ -26,9 +26,9 @@ class SudokuTest extends FunSuite with BeforeAndAfterEach {
                     Vector(8, 5, 3, 4, 7, 6, 2, 9, 1),
                     Vector(2, 4, 6, 3, 9, 1, 5, 7, 8))
 
-    test("Sudoku için çözüm test ediliyor."){
+    test("Sudoku icin çözüm test ediliyor"){
         val coz = Sudoku.solution(sdi)
-        coz === sdo
+        assert(coz == sdo)
     }
 
 
