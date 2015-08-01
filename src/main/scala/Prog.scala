@@ -65,6 +65,6 @@ object Prog {
         println(KnightJump.closedtour(6, 1, 1))
         println(KnightJump.alllazytours(7, 6, 4))
         println("felan filan")
-
+        
     }
 }
